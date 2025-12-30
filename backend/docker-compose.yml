@@ -1,0 +1,17 @@
+services:
+  smart-sources:
+    container_name: smart-sources-middleware
+    build: .
+    restart: unless-stopped
+    networks:
+      - caddy_net
+    # Load variables from .env file
+    env_file:
+      - .env
+    labels:
+      caddy: ${CADDY_HOST}
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+
+networks:
+  caddy_net:
+    external: true
