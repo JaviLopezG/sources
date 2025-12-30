@@ -16,7 +16,7 @@
 ## **🏗 Architecture**
 
 The system is composed of three parts to bypass browser CORS limitations and protect your AI endpoint:
-```
+```mermaid
 graph LR  
     A\[User / WP Admin\] \--\>|1. Analysis Request| B(VPS Middleware)  
     A \--\>|2. Metadata Request| A(WP OEmbed)  
@@ -37,22 +37,22 @@ This service runs on your VPS. It requires Docker and access to your Tailscale n
 1. Navigate to the `backend` folder.  
 2. Create a .env file:
 ```  
-   \# Your local machine's Tailscale IP  
-   OLLAMA\_URL=\[http://100.\](http://100.)x.y.z:11434/api/generate  
+   # Your local machine's Tailscale IP  
+   OLLAMA_URL=http://100.x.y.z:11434/api/generate  
    MODEL\_NAME=gemma3  
    PORT=3000  
    CADDY\_HOST=sources.yups.me
 ```
 3. Deploy with Docker Compose:  
 ```
-   docker compose up \-d
+   docker compose up -d
 ```
 ### **2\. Frontend (WordPress Plugin)**
 
 1. Zip the `frontend` folder or upload it to wp-content/plugins/smart-sources.  
 2. Edit smart-sources.php to point to your middleware:  
 ```
-   define('SMART\_SOURCES\_AI\_ENDPOINT', '\[https://sources.yups.me/api/analyze-context\](https://sources.yups.me/api/analyze-context)');
+   define('SMART_SOURCES_AI_ENDPOINT', 'https://sources.yups.me/api/analyze-context');
 ```
 3. Activate the plugin in WordPress.
 
