@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Container -->
+    <rect width="512" height="512" rx="128" fill="#F0F2F5"/>
+    
+    <!-- Main Document Shape -->
+    <path d="M340 120H172C154.327 120 140 134.327 140 152V360C140 377.673 154.327 392 172 392H340C357.673 392 372 377.673 372 360V152C372 134.327 357.673 120 340 120Z" fill="white" stroke="#2271B1" stroke-width="24"/>
+    
+    <!-- Abstract Lines (Text) -->
+    <rect x="190" y="180" width="132" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="190" y="220" width="132" height="16" rx="8" fill="#CBD5E1"/>
+    
+    <!-- AI/Link Node (The "Smart" part) -->
+    <circle cx="256" cy="310" r="36" fill="#2271B1"/>
+    <circle cx="256" cy="310" r="16" fill="white"/>
+    
+    <!-- Connection Nodes -->
+    <path d="M256 274V250" stroke="#2271B1" stroke-width="12" stroke-linecap="round"/>
+    <path d="M220 310H200" stroke="#2271B1" stroke-width="12" stroke-linecap="round"/>
+    <path d="M312 310H292" stroke="#2271B1" stroke-width="12" stroke-linecap="round"/>
+    <path d="M281.456 335.456L295.598 349.598" stroke="#2271B1" stroke-width="12" stroke-linecap="round"/>
+    <path d="M230.544 335.456L216.402 349.598" stroke="#2271B1" stroke-width="12" stroke-linecap="round"/>
+</svg>
