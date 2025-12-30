@@ -18,11 +18,11 @@
 The system is composed of three parts to bypass browser CORS limitations and protect your AI endpoint:
 ```mermaid
 graph LR  
-    A\[User / WP Admin\] \--\>|1. Analysis Request| B(VPS Middleware)  
-    A \--\>|2. Metadata Request| A(WP OEmbed)  
-    B \--\>|3. Scrape Source| C\[External Website\]  
-    B \--\>|4. AI Inference| D\[Local Ollama\]  
-    D \-.-\>|Tailscale VPN| B
+    A[User / WP Admin] -->|1. Analysis Request| B(VPS Middleware)  
+    A -->|2. Metadata Request| A(WP OEmbed)  
+    B -->|3. Scrape Source| C[External Website]  
+    B -->|4. AI Inference| D[Local Ollama]  
+    D -.->|Tailscale VPN| B
 ```
 1. **WordPress Plugin (Frontend)**: Orchestrates the process in the Block Editor.  
 2. **Node.js Middleware (Backend)**: Handles web scraping and communicates with the AI.  
